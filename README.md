@@ -9,6 +9,7 @@
 - Goto definition
 - TODO
   - [ ] semantic-release
+  - [ ] nx
 
 ## Resources
 
