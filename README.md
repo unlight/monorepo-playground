@@ -1,11 +1,19 @@
+# monorepo-playground
+
+## Stack
+- TypeScript
+
+## Features
+- Goto definition
+- [ ] nx
+
+## Resources
+- https://github.com/NiGhTTraX/ts-monorepo
+
 <!--suppress HtmlDeprecatedAttribute -->
 <div align="center">
 
-![](media/monorepo.png)
-
 Template project for setting up a TypeScript monorepo
-
-[![tests](https://github.com/NiGhTTraX/ts-monorepo/actions/workflows/tests.yml/badge.svg)](https://github.com/NiGhTTraX/ts-monorepo/actions/workflows/tests.yml)
 
 </div>
 
