@@ -1,1 +1,1 @@
-import "@acme/bar";
+import '@acme/bar';

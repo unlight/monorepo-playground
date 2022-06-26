@@ -20,14 +20,9 @@ module.exports = {
     },
     warnOnUnsupportedTypeScriptVersion: false,
   },
-  plugins: [
-    'unicorn',
-    '@typescript-eslint',
-    'only-warn',
-  ],
+  plugins: ['unicorn', '@typescript-eslint', 'only-warn'],
   ignorePatterns: ['@generated/**', '*.config.{js,cjs,mjs}'],
-  rules: {
-  },
+  rules: {},
   overrides: [
     {
       files: ['*.spec.ts', '**/testing/**/*.ts'],

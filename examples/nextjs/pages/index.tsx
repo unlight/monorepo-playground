@@ -1,4 +1,4 @@
-import React from "react";
-import { Button } from "@acme/components/button";
+import React from 'react';
+import { Button } from '@acme/components/button';
 
 export default () => <Button />;
