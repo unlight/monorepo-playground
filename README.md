@@ -1,15 +1,17 @@
 # monorepo-playground
 
 ## Stack
+
 - TypeScript
 
 ## Features
+
 - Goto definition
 - TODO
-  - [ ] nx
   - [ ] semantic-release
 
 ## Resources
+
 - https://github.com/NiGhTTraX/ts-monorepo
 - https://github.com/ryotah/monorepo-demo-nx-pnpm
 - https://github.com/JamieMason/syncpack
@@ -24,6 +26,7 @@ Template project for setting up a TypeScript monorepo
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
 **Table of content**
 
 - [Features](#features)
@@ -113,16 +116,16 @@ Use [babel-plugin-module-resolver](https://www.npmjs.com/package/babel-plugin-mo
 ```js
 module.exports = {
   presets: [
-    ["@babel/preset-env", { targets: { node: "current" } }],
-    "@babel/preset-typescript",
+    ['@babel/preset-env', { targets: { node: 'current' } }],
+    '@babel/preset-typescript',
   ],
 
   plugins: [
     [
-      "module-resolver",
+      'module-resolver',
       {
         alias: {
-          "^@nighttrax/(.+)": "../\\1/src",
+          '^@nighttrax/(.+)': '../\\1/src',
         },
       },
     ],
@@ -137,12 +140,12 @@ See the full example [here](examples/jest-babel).
 Use [tsconfig-paths-webpack-plugin](https://www.npmjs.com/package/tsconfig-paths-webpack-plugin) to resolve the path aliases:
 
 ```js
-const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 module.exports = {
   resolve: {
-    plugins: [new TsconfigPathsPlugin()]
-  }
+    plugins: [new TsconfigPathsPlugin()],
+  },
 };
 ```
 
@@ -152,18 +155,18 @@ See the full example [here](examples/webpack).
 
 If you use `Babel` then see [this example](examples/jest-babel) from the [Babel](#babel) section above.
 
-If you use [ts-jest](https://github.com/kulshekhar/ts-jest) then you can use its `pathsToModuleNameMapper` helper: 
+If you use [ts-jest](https://github.com/kulshekhar/ts-jest) then you can use its `pathsToModuleNameMapper` helper:
 
 ```js
-const { pathsToModuleNameMapper } = require("ts-jest");
-const { compilerOptions } = require("../../tsconfig.json");
+const { pathsToModuleNameMapper } = require('ts-jest');
+const { compilerOptions } = require('../../tsconfig.json');
 
 module.exports = {
-  preset: "ts-jest",
+  preset: 'ts-jest',
 
   moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
     // This has to match the baseUrl defined in tsconfig.json.
-    prefix: "<rootDir>/../../",
+    prefix: '<rootDir>/../../',
   }),
 };
 ```
@@ -175,9 +178,9 @@ See the full example [here](examples/jest-tsjest).
 Use [craco](https://www.npmjs.com/package/@craco/craco) or [react-app-rewired](https://www.npmjs.com/package/react-app-rewired) to extend CRA's webpack config and apply the [tsconfig-paths-webpack-plugin](https://www.npmjs.com/package/tsconfig-paths-webpack-plugin):
 
 ```js
-const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
-module.exports = (config) => {
+module.exports = config => {
   // Remove the ModuleScopePlugin which throws when we
   // try to import something outside of src/.
   config.resolve.plugins.pop();
@@ -186,10 +189,8 @@ module.exports = (config) => {
   config.resolve.plugins.push(new TsconfigPathsPlugin());
 
   // Let Babel compile outside of src/.
-  const oneOfRule = config.module.rules.find((rule) => rule.oneOf);
-    const tsRule = oneOfRule.oneOf.find((rule) =>
-      rule.test.toString().includes("ts|tsx")
-    );
+  const oneOfRule = config.module.rules.find(rule => rule.oneOf);
+  const tsRule = oneOfRule.oneOf.find(rule => rule.test.toString().includes('ts|tsx'));
   tsRule.include = undefined;
   tsRule.exclude = /node_modules/;
 
@@ -205,10 +206,10 @@ Extend Next's webpack config to enable compiling packages from the monorepo:
 
 ```js
 module.exports = {
-  webpack: (config) => {
+  webpack: config => {
     // Let Babel compile outside of src/.
     const tsRule = config.module.rules.find(
-      (rule) => rule.test && rule.test.toString().includes("tsx|ts")
+      rule => rule.test && rule.test.toString().includes('tsx|ts'),
     );
     tsRule.include = undefined;
     tsRule.exclude = /node_modules/;
@@ -242,7 +243,7 @@ See the full example [here](examples/nestjs).
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 module.exports = {
-  webpackFinal: async (config) => {
+  webpackFinal: async config => {
     config.resolve.plugins = [
       ...(config.resolve.plugins || []),
       new TsconfigPathsPlugin({

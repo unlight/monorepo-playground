@@ -7,12 +7,14 @@
     "examples/*"
   ],
   "scripts": {
-    "clean": "pnpm run -r clean",
     "build": "pnpm run -r build",
+    "typecheck": "pnpm run -r typecheck",
     "test": "pnpm run -r test",
-    "lint": "eslint --ext js,ts,tsx ."
+    "lint": "eslint --ext js,ts,tsx .",
+    "clean": "pnpm run -r clean"
   },
   "devDependencies": {
+    "prettier": "~2.7.1",
     "eslint": "~8.18.0",
     "typescript": "~4.7.4",
     "eslint-plugin-unicorn": "~42.0.0",

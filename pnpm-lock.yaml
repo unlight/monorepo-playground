@@ -9,6 +9,7 @@ importers:
       eslint: ~8.18.0
       eslint-plugin-only-warn: ~1.0.3
       eslint-plugin-unicorn: ~42.0.0
+      prettier: ~2.7.1
       typescript: ~4.7.4
     devDependencies:
       '@typescript-eslint/eslint-plugin': 5.29.0_qqmbkyiaixvppdwswpytuf2hgm
@@ -16,6 +17,7 @@ importers:
       eslint: 8.18.0
       eslint-plugin-only-warn: 1.0.3
       eslint-plugin-unicorn: 42.0.0_eslint@8.18.0
+      prettier: 2.7.1
       typescript: 4.7.4
 
   examples/cra:
@@ -13831,6 +13833,12 @@ packages:
 
   /prettier/2.3.0:
     resolution: {integrity: sha512-kXtO4s0Lz/DW/IJ9QdWhAf7/NmPWQXkFr/r/WkR3vyI+0v8amTDxiaQSLzs8NBlytfLWX/7uQUMIW677yLKl4w==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
+    dev: true
+
+  /prettier/2.7.1:
+    resolution: {integrity: sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     dev: true

@@ -5,7 +5,8 @@
   "version": "1.0.0",
   "scripts": {
     "start": "ts-node -r tsconfig-paths/register src/index.ts",
-    "test": "pnpm run start"
+    "test": "pnpm run start",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@acme/foo": "*"
