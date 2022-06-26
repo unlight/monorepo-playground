@@ -11,6 +11,11 @@
   - [ ] semantic-release
   - [ ] nx
 
+## Commands
+
+- npx syncpack list-mismatches
+- npx syncpack fix-mismatches --dev --peer --prod
+
 ## Resources
 
 - https://github.com/NiGhTTraX/ts-monorepo
