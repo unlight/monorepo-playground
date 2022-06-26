@@ -253,7 +253,7 @@ importers:
 
   packages/bar:
     specifiers:
-      '@acme/foo': ~1.0.0
+      '@acme/foo': '*'
       rimraf: ~3.0.2
       typescript: ~4.7.4
     dependencies:
