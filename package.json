@@ -7,7 +7,6 @@
     "examples/*"
   ],
   "scripts": {
-    "docs": "doctoc --title '**Table of content**' README.md",
     "clean": "pnpm run -r clean",
     "build": "pnpm run -r build",
     "test": "pnpm run -r test",
