@@ -1,0 +1,47 @@
+{
+  "npmScope": "demo",
+  "workspaceLayout": {
+    "appsDir": "examples",
+    "libsDir": "packages"
+  },
+  "implicitDependencies": {
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    ".eslintrc.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build", "test", "lint", "package", "prepare"]
+      }
+    }
+  },
+  "affected": {
+    "defaultBase": "master"
+  },
+  "targetDependencies": {
+    "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ],
+    "deploy": [
+      {
+        "target": "lint",
+        "projects": "self"
+      },
+      {
+        "target": "test",
+        "projects": "self"
+      },
+      {
+        "target": "build",
+        "projects": "self"
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "projects": {
+    "node1": {
+      "root": "examples/ts-node"
+    },
+    "mol": {
+      "root": "packages/foo"
+    },
+    "logmol": {
+      "root": "packages/bar"
+    },
+    "components": {
+      "root": "packages/components"
+    }
+  }
+}
