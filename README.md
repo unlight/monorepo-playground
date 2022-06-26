@@ -7,9 +7,13 @@
 - Goto definition
 - TODO
   - [ ] nx
+  - [ ] semantic-release
 
 ## Resources
 - https://github.com/NiGhTTraX/ts-monorepo
+- https://github.com/ryotah/monorepo-demo-nx-pnpm
+- https://github.com/JamieMason/syncpack
+- https://github.com/stars/unlight/lists/monorepo
 
 <!--suppress HtmlDeprecatedAttribute -->
 <div align="center">
