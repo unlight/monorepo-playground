@@ -8,6 +8,7 @@
 
 - Goto definition
 - TODO
+  - [ ] remove rimraf, replace native rm
   - [ ] semantic-release
   - [ ] nx
 
@@ -15,6 +16,7 @@
 
 - npx syncpack list-mismatches
 - npx syncpack fix-mismatches --dev --peer --prod
+- pnpm run --dir examples/nestjs start:dev
 
 ## Resources
 

@@ -1,6 +1,9 @@
 {
   "version": 2,
   "projects": {
+    "nestjs": {
+      "root": "examples/nestjs"
+    },
     "node1": {
       "root": "examples/ts-node"
     },
