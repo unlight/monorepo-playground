@@ -1,11 +1,11 @@
 {
-  "name": "@nighttrax/cra-example",
+  "name": "@acme/cra-example",
   "description": "Example of using create-react-app in a TS monorepo",
   "private": true,
   "version": "1.0.0",
   "dependencies": {
-    "@nighttrax/foo": "*",
-    "@nighttrax/components": "*",
+    "@acme/foo": "*",
+    "@acme/components": "*",
     "react": "~18.2.0",
     "react-dom": "~18.2.0"
   },

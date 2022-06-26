@@ -3,8 +3,8 @@
     "baseUrl": ".",
 
     "paths": {
-      "@nighttrax/components/*": ["../../packages/components/src/*"],
-      "@nighttrax/*": ["../../packages/*/src"],
+      "@acme/components/*": ["../../packages/components/src/*"],
+      "@acme/*": ["../../packages/*/src"],
 
       "@components/*": ["./src/components/*"],
       "@hooks/*": ["./src/hooks/*"]

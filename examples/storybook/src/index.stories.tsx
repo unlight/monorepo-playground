@@ -1,4 +1,4 @@
-import { Button } from "@nighttrax/components/button";
+import { Button } from "@acme/components/button";
 import React from "react";
 import { Foo } from "./components/foo";
 
