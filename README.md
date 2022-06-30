@@ -10,7 +10,9 @@
 - TODO
   - [ ] remove rimraf, replace native rm
   - [ ] semantic-release
+  - [ ] switch to mjs
   - [ ] nx
+  - [ ] switch to npm
 
 ## Commands
 
