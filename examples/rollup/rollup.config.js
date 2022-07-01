@@ -1,11 +1,11 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import typescript from '@rollup/plugin-typescript';
-import pkg from './package.json';
+import package_ from './package.json';
 
 export default [
   {
     input: 'src/index.tsx',
-    external: Object.keys(pkg.dependencies),
+    external: Object.keys(package_.dependencies),
     plugins: [
       typescript({
         tsconfig: './tsconfig.build.json',

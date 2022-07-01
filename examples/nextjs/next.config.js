@@ -8,10 +8,10 @@ const updateNextGreaterThan12Config = config => {
     rule => rule.test && rule.test.toString().includes('tsx|ts'),
   );
 
-  tsRules.forEach(rule => {
+  for (const rule of tsRules) {
     // eslint-disable-next-line no-param-reassign
     rule.include = undefined;
-  });
+  }
 
   return config;
 };

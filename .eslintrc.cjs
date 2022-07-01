@@ -21,7 +21,15 @@ module.exports = {
     warnOnUnsupportedTypeScriptVersion: false,
   },
   plugins: ['unicorn', '@typescript-eslint', 'only-warn'],
-  ignorePatterns: ['@generated/**', '*.config.{js,cjs,mjs}'],
+  ignorePatterns: [
+    '**/@generated/**',
+    '*.config.{js,cjs,mjs}',
+    '**/dist/**',
+    '**/node_modules/**',
+    '**/build/**',
+    '**/.next/**',
+    '**/.vercel/**',
+  ],
   rules: {},
   overrides: [
     {

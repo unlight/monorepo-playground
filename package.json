@@ -9,8 +9,8 @@
   "scripts": {
     "build": "pnpm run -r build",
     "typecheck": "pnpm run -r typecheck",
-    "test": "pnpm run -r test",
-    "lint": "eslint --ext js,ts,tsx .",
+    "test": "pnpm run eslint && pnpm run -r test && pnpm run -r typecheck",
+    "eslint": "eslint --ext js,ts,tsx .",
     "clean": "pnpm run -r clean"
   },
   "devDependencies": {
