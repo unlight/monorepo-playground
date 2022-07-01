@@ -8,7 +8,6 @@
 
 - Goto definition
 - TODO
-  - [ ] remove rimraf, replace native rm
   - [ ] wireit
   - [ ] semantic-release
   - [ ] switch to mjs

@@ -196,7 +196,6 @@ importers:
       react: ~17.0.2
       react-dom: ~17.0.2
       require-from-string: ~2.0.2
-      rimraf: ~3.0.2
       tsconfig-paths-webpack-plugin: ~3.5.2
       typescript: ~4.7.4
       webpack: ~5.73.0
@@ -212,7 +211,6 @@ importers:
       '@storybook/react': 6.5.9_w7e373a2y2ewnqeramo2fjlwq4
       babel-loader: 8.2.5_te6ollfzjcco6mbxjl755ucqke
       require-from-string: 2.0.2
-      rimraf: 3.0.2
       tsconfig-paths-webpack-plugin: 3.5.2
       typescript: 4.7.4
       webpack: 5.73.0
@@ -254,12 +252,10 @@ importers:
   packages/bar:
     specifiers:
       '@acme/foo': '*'
-      rimraf: ~3.0.2
       typescript: ~4.7.4
     dependencies:
       '@acme/foo': link:../foo
     devDependencies:
-      rimraf: 3.0.2
       typescript: 4.7.4
 
   packages/components:
@@ -268,21 +264,17 @@ importers:
       '@types/react': ~18.0.0
       react: ~18.2.0
       react-dom: ~18.2.0
-      rimraf: ~3.0.2
     dependencies:
       '@acme/foo': link:../foo
     devDependencies:
       '@types/react': 18.0.14
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      rimraf: 3.0.2
 
   packages/foo:
     specifiers:
-      rimraf: ~3.0.2
       typescript: ~4.7.4
     devDependencies:
-      rimraf: 3.0.2
       typescript: 4.7.4
 
 packages:
