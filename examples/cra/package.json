@@ -4,7 +4,7 @@
   "private": true,
   "version": "1.0.0",
   "dependencies": {
-    "@acme/foo": "*",
+    "@acme/foo": "workspace:*",
     "@acme/components": "*",
     "react": "~18.2.0",
     "react-dom": "~18.2.0"

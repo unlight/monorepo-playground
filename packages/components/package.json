@@ -12,7 +12,7 @@
     "react": "~18.2.0"
   },
   "dependencies": {
-    "@acme/foo": "*"
+    "@acme/foo": "workspace:*"
   },
   "devDependencies": {
     "@types/react": "~18.0.0",

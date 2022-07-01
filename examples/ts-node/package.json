@@ -9,7 +9,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@acme/foo": "*"
+    "@acme/foo": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "~17.0.5",

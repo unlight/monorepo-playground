@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "clean": "rimraf dist",
+    "clean": "rm -rf dist",
     "prebuild": "pnpm run clean",
     "build": "nest build",
     "typecheck": "tsc --noEmit",
@@ -15,9 +15,8 @@
     "@nestjs/common": "~8.4.0",
     "@nestjs/core": "~8.4.0",
     "@nestjs/platform-express": "~8.4.0",
-    "@acme/foo": "*",
+    "@acme/foo": "workspace:*",
     "reflect-metadata": "~0.1.13",
-    "rimraf": "~3.0.2",
     "rxjs": "~7.5.5"
   },
   "devDependencies": {

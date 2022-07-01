@@ -7,7 +7,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@acme/foo": "*"
+    "@acme/foo": "workspace:*"
   },
   "devDependencies": {
     "@types/jest": "~27.5.0",
