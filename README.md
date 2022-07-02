@@ -11,7 +11,7 @@
 ## TODO
 
 - [ ] semantic-release
-  - [ ] update all related dependent package
+  - [ ] update all related dependent package (try to run semrel for @acme/bar package dep @acme/foo should be updated to next version of foo)
 - [ ] wireit
 - [ ] switch to mjs
 - [ ] nx
@@ -31,6 +31,7 @@
 - https://github.com/ryotah/monorepo-demo-nx-pnpm
 - https://github.com/JamieMason/syncpack
 - https://github.com/stars/unlight/lists/monorepo
+- https://github.com/kshutkin/update-monorepo-package-json
 
 <!--suppress HtmlDeprecatedAttribute -->
 <div align="center">
