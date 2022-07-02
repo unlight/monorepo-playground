@@ -7,12 +7,15 @@
 ## Features
 
 - Goto definition
-- TODO
-  - [ ] wireit
-  - [ ] semantic-release
-  - [ ] switch to mjs
-  - [ ] nx
-  - [ ] switch to npm
+
+## TODO
+
+- [ ] semantic-release
+  - [ ] update all related dependent package
+- [ ] wireit
+- [ ] switch to mjs
+- [ ] nx
+- [ ] switch to npm
 
 ## Commands
 
