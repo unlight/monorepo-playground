@@ -2,7 +2,7 @@
   "name": "@acme/components",
   "version": "0.0.0-dev",
   "scripts": {
-    "build": "pnpm run clean && pnpm run compile",
+    "build": "npm run clean && npm run compile",
     "clean": "rm -rf ./dist",
     "compile": "tsc -p tsconfig.build.json",
     "typecheck": "tsc --noEmit",
