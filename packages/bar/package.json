@@ -1,6 +1,6 @@
 {
   "name": "@acme/bar",
-  "version": "1.0.0",
+  "version": "0.0.0-dev",
   "main": "dist/index",
   "types": "dist/index",
   "files": [
@@ -11,7 +11,8 @@
     "clean": "rm -rf ./dist",
     "compile": "tsc -p tsconfig.build.json",
     "typecheck": "tsc --noEmit",
-    "prepublishOnly": "pnpm run build"
+    "prepublishOnly": "pnpm run build",
+    "semantic-release": "semantic-release"
   },
   "dependencies": {
     "@acme/foo": "workspace:*"

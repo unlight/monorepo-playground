@@ -1,12 +1,13 @@
 {
   "name": "@acme/components",
-  "version": "1.0.0",
+  "version": "0.0.0-dev",
   "scripts": {
     "build": "pnpm run clean && pnpm run compile",
     "clean": "rm -rf ./dist",
     "compile": "tsc -p tsconfig.build.json",
     "typecheck": "tsc --noEmit",
-    "prepublishOnly": "pnpm run build"
+    "prepublishOnly": "pnpm run build",
+    "semantic-release": "semantic-release"
   },
   "peerDependencies": {
     "react": "~18.2.0"
