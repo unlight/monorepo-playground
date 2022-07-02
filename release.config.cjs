@@ -15,6 +15,12 @@ module.exports = {
     ],
     '@semantic-release/changelog',
     [
+      'semantic-release-tap',
+      {
+        exampleSetting: 1,
+      },
+    ],
+    [
       '@semantic-release/npm',
       {
         pkgRoot: './dist',

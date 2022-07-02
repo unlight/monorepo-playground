@@ -16,6 +16,7 @@ importers:
       prettier: ~2.7.1
       semantic-release: ^19.0.3
       semantic-release-commit-filter: workspace:*
+      semantic-release-tap: workspace:*
       syncpack: ~8.2.4
       typescript: ~4.7.4
     devDependencies:
@@ -31,6 +32,7 @@ importers:
       prettier: 2.7.1
       semantic-release: 19.0.3
       semantic-release-commit-filter: link:packages/semantic-release-commit-filter
+      semantic-release-tap: link:packages/semantic-release-tap
       syncpack: 8.2.4
       typescript: 4.7.4
 
@@ -284,6 +286,9 @@ importers:
       typescript: ~4.7.4
     devDependencies:
       typescript: 4.7.4
+
+  packages/semantic-release-tap:
+    specifiers: {}
 
 packages:
 

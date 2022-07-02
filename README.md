@@ -12,6 +12,7 @@
 
 - [ ] semantic-release
   - [ ] update all related dependent package (try to run semrel for @acme/bar package dep @acme/foo should be updated to next version of foo)
+  - [ ] need find api which works with workspaces
 - [ ] wireit
 - [ ] switch to mjs
 - [ ] nx
@@ -24,6 +25,7 @@
 - pnpm run --dir examples/nestjs start:dev
 - pnpm run --dir packages/foo build
 - pnpm run --dir packages/foo semantic-release
+- npm pkg get repository.directory --json -ws
 
 ## Resources
 
@@ -32,6 +34,10 @@
 - https://github.com/JamieMason/syncpack
 - https://github.com/stars/unlight/lists/monorepo
 - https://github.com/kshutkin/update-monorepo-package-json
+- https://github.com/eclass/template-semantic-release-plugin
+- https://github.com/azu/monorepo-utils
+- https://github.com/tsedio/tsed-monorepo-utils
+- https://github.com/npm/map-workspaces
 
 <!--suppress HtmlDeprecatedAttribute -->
 <div align="center">
