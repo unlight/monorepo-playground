@@ -19,6 +19,7 @@
 - npx syncpack list-mismatches
 - npx syncpack fix-mismatches --dev --peer --prod
 - pnpm run --dir examples/nestjs start:dev
+- pnpm run --dir packages/foo build
 - pnpm run --dir packages/foo semantic-release
 
 ## Resources
