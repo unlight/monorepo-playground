@@ -3,8 +3,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@acme/components/*": ["packages/components/src/*"],
-      "@acme/*": ["packages/*/src"]
+      "@acme/*": ["packages/*/src"],
+      "@acme/components/*": ["packages/components/src/*"]
     },
     "noEmit": true
   }
