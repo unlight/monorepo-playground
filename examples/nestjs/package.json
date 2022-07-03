@@ -1,5 +1,5 @@
 {
-  "name": "nestjs",
+  "name": "@acme/nestjs",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -15,7 +15,7 @@
     "@nestjs/common": "~8.4.0",
     "@nestjs/core": "~8.4.0",
     "@nestjs/platform-express": "~8.4.0",
-    "@acme/foo": "workspace:*",
+    "@acme/foo": "*",
     "reflect-metadata": "~0.1.13",
     "rxjs": "~7.5.5"
   },
