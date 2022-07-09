@@ -15,7 +15,7 @@
     "semantic-release": "semantic-release"
   },
   "dependencies": {
-    "@acme/foo": "workspace:*"
+    "@acme/foo": "*"
   },
   "devDependencies": {
     "typescript": "~4.7.4"

@@ -22,10 +22,11 @@
 
 - npx syncpack list-mismatches
 - npx syncpack fix-mismatches --dev --peer --prod
-- pnpm run --dir examples/nestjs start:dev
-- pnpm run --dir packages/foo build
-- pnpm run --dir packages/foo semantic-release
+- npm run -w examples/nestjs start:dev
+- npm run -w packages/bar semantic-release
+- npm run -w packages/bar build
 - npm pkg get repository.directory --json -ws
+- nx run-many --target=build --all
 
 ## Resources
 
@@ -38,6 +39,7 @@
 - https://github.com/azu/monorepo-utils
 - https://github.com/tsedio/tsed-monorepo-utils
 - https://github.com/npm/map-workspaces
+- https://github.com/antongolub/git-root
 
 <!--suppress HtmlDeprecatedAttribute -->
 <div align="center">
