@@ -47,7 +47,6 @@ exports.verifyConditions = async function verifyConditions(pluginConfig, context
   });
 
   Object.assign(pluginContext, { root, cwdPackage, workspaces });
-  console.log('pluginContext', pluginContext);
 };
 
 // exports.analyzeCommits = async function analyzeCommits(pluginConfig, context) {

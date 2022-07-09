@@ -18,7 +18,15 @@ it.only('semantic-release integration', async () => {
   const result = await semanticRelease(
     {
       branches: ['master'],
-      plugins: [plugin],
+      plugins: [
+        plugin,
+        [
+          '@semantic-release/npm',
+          {
+            pkgRoot: './dist',
+          },
+        ],
+      ],
     },
     {
       cwd: __dirname,
