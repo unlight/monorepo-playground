@@ -16,14 +16,15 @@
 - [ ] wireit
 - [ ] switch to mjs
 - [ ] nx
-- [ ] switch to npm
 
 ## Commands
 
+- npm run -w packages/semantic-release-tap test:w
 - npx syncpack list-mismatches
 - npx syncpack fix-mismatches --dev --peer --prod
 - npm run -w examples/nestjs start:dev
 - npm run -w packages/bar semantic-release
+- npm --node-options --inspect run -w packages/bar semantic-release
 - npm run -w packages/bar build
 - npm pkg get repository.directory --json -ws
 - nx run-many --target=build --all
