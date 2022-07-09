@@ -30,7 +30,9 @@ module.exports = {
     '**/.next/**',
     '**/.vercel/**',
   ],
-  rules: {},
+  rules: {
+    '@typescript-eslint/no-unsafe-assignment': 0,
+  },
   overrides: [
     {
       files: ['*.spec.ts', '**/testing/**/*.ts'],

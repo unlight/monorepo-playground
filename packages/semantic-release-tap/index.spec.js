@@ -6,22 +6,22 @@ it('smoke', () => {
   assert.ok(1);
 });
 
-it.only('verifyConditions', async () => {
+it('verifyConditions', async () => {
   const context = {
-    cwd: process.cwd(),
+    cwd: __dirname,
   };
-
-  console.log('context', context);
 
   await plugin.verifyConditions({}, context);
 });
 
-it('semantic-release', async () => {
+it.only('semantic-release integration', async () => {
   const result = await semanticRelease(
     {
-      branches: ['master', 'npm8'],
+      branches: ['master'],
       plugins: [plugin],
     },
-    {},
+    {
+      cwd: __dirname,
+    },
   );
 });

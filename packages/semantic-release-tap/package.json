@@ -2,7 +2,8 @@
   "name": "semantic-release-tap",
   "scripts": {
     "test:r": "mocha index.spec.js",
-    "test:w": "mocha index.spec.js --watch-files . --watch --no-timeout"
+    "test:w": "mocha index.spec.js --watch-files . --watch --no-timeout",
+    "semantic-release": "semantic-release"
   },
   "dependencies": {
     "@antongolub/git-root": "^1.5.7",

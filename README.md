@@ -20,6 +20,7 @@
 ## Commands
 
 - npm run -w packages/semantic-release-tap test:w
+- npm --node-options --inspect run -w packages/semantic-release-tap semantic-release -- --no-ci
 - npx syncpack list-mismatches
 - npx syncpack fix-mismatches --dev --peer --prod
 - npm run -w examples/nestjs start:dev
