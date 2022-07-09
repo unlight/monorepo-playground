@@ -39,6 +39,7 @@
 - https://github.com/azu/monorepo-utils
 - https://github.com/tsedio/tsed-monorepo-utils
 - https://github.com/npm/map-workspaces
+- https://github.com/antongolub/git-root
 
 <!--suppress HtmlDeprecatedAttribute -->
 <div align="center">

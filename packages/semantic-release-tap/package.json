@@ -1,3 +1,14 @@
 {
-  "name": "semantic-release-tap"
+  "name": "semantic-release-tap",
+  "scripts": {
+    "test:w": "mocha index.spec.js --watch-files . --watch --no-timeout"
+  },
+  "dependencies": {
+    "@antongolub/git-root": "^1.5.7",
+    "@npmcli/map-workspaces": "^2.0.3",
+    "read-package-json-fast": "^2.0.3"
+  },
+  "devDependencies": {
+    "mocha": "^10.0.0"
+  }
 }

@@ -2,9 +2,9 @@
   "compilerOptions": {
     "module": "commonjs",
     "target": "es2020",
-    "sourceMap": true,
+    "sourceMap": false,
     "declaration": true,
-    "declarationMap": true,
+    "declarationMap": false,
     "noEmitOnError": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
