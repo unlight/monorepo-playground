@@ -29,7 +29,13 @@ const baseContext = {
       gitTags: '(HEAD -> master)',
     },
   ],
-  lastRelease: {},
+  lastRelease: {
+    version: '1.0.2',
+    gitTag: 'semantic-release-tap-v1.0.2',
+    channels: [null],
+    gitHead: '4a6f439c9143cc864f493cc297f5a3c556feaf0f',
+    name: 'semantic-release-tap-v1.0.2',
+  },
   releases: [],
   branch: {
     tags: [

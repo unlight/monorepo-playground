@@ -37,6 +37,7 @@ module.exports = {
     {
       files: ['*.spec.ts', '**/testing/**/*.ts'],
       rules: {
+        '@typescript-eslint/no-unsafe-call': 0,
         'consistent-return': 0,
         'max-lines': 0,
       },

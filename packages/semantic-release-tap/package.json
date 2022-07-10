@@ -8,7 +8,8 @@
   "dependencies": {
     "@antongolub/git-root": "^1.5.7",
     "@npmcli/map-workspaces": "^2.0.3",
-    "read-package-json-fast": "^2.0.3"
+    "read-package-json-fast": "^2.0.3",
+    "semver": "^7.3.7"
   },
   "devDependencies": {
     "mocha": "^10.0.0"
