@@ -1,8 +1,9 @@
 const assert = require('assert/strict');
 const semanticRelease = require('semantic-release');
 const { gitRoot } = require('@antongolub/git-root');
+const { createContext } = require('./context.fixture.js');
+
 const plugin = require('./index.js');
-const { contextSymbol } = plugin;
 
 let root;
 
@@ -16,38 +17,50 @@ it('smoke', () => {
 });
 
 it.skip('semver playground', () => {
-  const semver = require('semver');
   const semverMaxSatisfying = require('semver/ranges/max-satisfying');
   console.log('semverMaxSatisfying', semverMaxSatisfying(['1.2.3', '2.0.0'], '*'));
 });
 
-it.skip('verifyConditions', async () => {
-  const context = {
-    cwd: __dirname,
-    stdout: process.stdout,
-  };
+it('verifyConditions', async () => {
+  const context = createContext({ cwd: __dirname });
 
   await plugin.verifyConditions({}, context);
 });
 
-// it.only('prepare', async () => {
-//   await plugin.prepare({}, context);
-// });
+it('prepare', async () => {
+  const context = createContext();
+  plugin.pluginContext(context, {
+    cwdDistPackage: {
+      dependencies: {
+        '@acme/foo': '*',
+      },
+    },
+    workspaces: new Map([
+      ['@acme/bar', root + '/packages/bar'],
+      ['@acme/foo', root + '/packages/foo'],
+    ]),
+  });
 
-it('integration keep context between steps', async () => {
+  await plugin.prepare({}, context);
+});
+
+it.only('dry run', async () => {
   let pluginContext;
-  process.stdout.on(contextSymbol, data => {
+  process.stdout.on(plugin.contextSymbol, data => {
     pluginContext = data;
   });
 
   await semanticRelease({
     dryRun: true,
+    noCi: true,
     branches: ['master'],
     plugins: [plugin],
+    repositoryUrl: '.',
   });
 
   assert.ok(pluginContext);
   assert.ok(pluginContext.root);
+  assert.ok(pluginContext.workspaces);
 });
 
 it('integration semantic-release-tap', async () => {

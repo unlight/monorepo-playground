@@ -1,10 +1,14 @@
-const { cloneDeep } = require('lodash');
+const { merge } = require('lodash');
 
-function createContext() {
-  return cloneDeep({
+exports.createContext = function createContext(parts) {
+  return merge(
+    {
+      stdout: process.stdout,
+    },
     baseContext,
-  });
-}
+    parts,
+  );
+};
 
 const baseContext = {
   commits: [
@@ -30,11 +34,11 @@ const baseContext = {
     },
   ],
   lastRelease: {
-    version: '1.0.2',
-    gitTag: 'semantic-release-tap-v1.0.2',
+    version: '1.0.0',
+    gitTag: 'semantic-release-tap-v1.0.0',
     channels: [null],
     gitHead: '4a6f439c9143cc864f493cc297f5a3c556feaf0f',
-    name: 'semantic-release-tap-v1.0.2',
+    name: 'semantic-release-tap-v1.0.0',
   },
   releases: [],
   branch: {
@@ -85,7 +89,7 @@ const baseContext = {
       ['@semantic-release/commit-analyzer', { preset: 'conventionalcommits' }],
       ['@semantic-release/release-notes-generator', { preset: 'conventionalcommits' }],
       '@semantic-release/changelog',
-      ['semantic-release-tap', { exampleSetting: 1 }],
+      ['semantic-release-tap', {}],
       ['@semantic-release/npm', { pkgRoot: './dist' }],
       '@semantic-release/git',
     ],
