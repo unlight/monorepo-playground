@@ -19,6 +19,8 @@
 
 ## Commands
 
+- set WIREIT_PARALLEL=1
+- npm run build -w @acme/bar
 - npm run -w packages/semantic-release-tap test:w
 - npm --node-options --inspect run -w packages/semantic-release-tap semantic-release -- --no-ci
 - npx syncpack list-mismatches
@@ -42,6 +44,10 @@
 - https://github.com/tsedio/tsed-monorepo-utils
 - https://github.com/npm/map-workspaces
 - https://github.com/antongolub/git-root
+
+## Notes
+
+- wireit.[script] dependencies will executes in parallel
 
 <!--suppress HtmlDeprecatedAttribute -->
 <div align="center">

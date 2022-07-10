@@ -1,4 +1,5 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
     "module": "commonjs",
     "target": "es2020",
@@ -8,9 +9,12 @@
     "noEmitOnError": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
-    "types": [],
     "jsx": "react",
-    "noEmit": false
+    "noEmit": false,
+    "lib": ["esnext"],
+    "moduleResolution": "node",
+    "types": [],
+    "outDir": "./dist"
   },
   "exclude": ["node_modules", "dist"]
 }

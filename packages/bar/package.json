@@ -7,12 +7,30 @@
     "dist"
   ],
   "scripts": {
-    "build": "npm run clean && npm run compile && cp package.json dist",
-    "clean": "rm -rf ./dist",
-    "compile": "tsc -p tsconfig.build.json",
+    "build": "wireit",
+    "clean": "wireit",
+    "compile": "wireit",
     "typecheck": "tsc --noEmit",
-    "prepublishOnly": "pnpm run build",
-    "semantic-release": "semantic-release"
+    "prepublishOnly": "npm run build",
+    "semantic-release": "wireit"
+  },
+  "wireit": {
+    "build": {
+      "command": "npm run compile && cp package.json dist",
+      "dependencies": [
+        "clean",
+        "../../packages/foo:build"
+      ]
+    },
+    "compile": {
+      "command": "tsc -p ./tsconfig.build.json"
+    },
+    "clean": {
+      "command": "rm -rf ./dist"
+    },
+    "semantic-release": {
+      "command": "semantic-release"
+    }
   },
   "dependencies": {
     "@acme/foo": "*"
