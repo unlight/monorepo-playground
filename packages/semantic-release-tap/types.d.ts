@@ -9,9 +9,7 @@ export interface Context
     SemanticReleaseConfig,
     SemanticReleaseResult {}
 
-export interface Config {
-  exampleSetting: number;
-}
+export interface Config {}
 
 export interface SemanticReleaseError {
   message: string;

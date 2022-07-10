@@ -14,12 +14,7 @@ module.exports = {
       },
     ],
     '@semantic-release/changelog',
-    [
-      'semantic-release-tap',
-      {
-        exampleSetting: 1,
-      },
-    ],
+    ['semantic-release-tap', {}],
     [
       '@semantic-release/npm',
       {
